@@ -80,4 +80,30 @@ public class App
             System.out.println("Ganó la máquina");
           }
     }
+    public static void DrawTable(String[] iTablero){   
+            //Dibujar el tablero
+            String linea1 = "";
+            String linea2 = "";
+            String linea3 = "";
+            for (int i = 0; i < iTablero.length; i++) {
+             String strValor = "";
+             if (iTablero[i] != null) {
+              strValor = "  " + iTablero[i] + "  ";
+             } else {
+              strValor = " [" + i + "] ";
+             }
+             if (i < 3) {
+              linea1 += strValor;
+             }
+             if (i >= 3 && i < 6) {
+              linea2 += strValor;
+             }
+             if (i >= 6 && i < 9) {
+              linea3 += strValor;
+             }
+            }
+            System.out.println(linea1);
+            System.out.println(linea2);
+            System.out.println(linea3);
+         }
 }
